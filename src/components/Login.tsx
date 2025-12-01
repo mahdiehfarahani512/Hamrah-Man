@@ -3,6 +3,7 @@ import logo1 from "../images/light-logo.svg"
 import { useTranslation } from 'react-i18next'
 const Login = () => {
     const {t}=useTranslation()
+    
   return (
     <div className='bg-[#0095da] w-full h-screen flex flex-col justify-center items-center relative'>
   
@@ -21,7 +22,7 @@ const Login = () => {
     <p className='text-[#1f2937] text-[13px] text-right mt-3'>{t("Hello, please enter your mobile phone number.")}</p>
 </div>
 
-<div className="border border-gray-300 rounded-[10px] p-2 w-full mt-6 flex flex-row-reverse items-center gap-3">
+<div className="border border-gray-300 rounded-[10px] p-2 w-full mt-6 flex flex-row-reverse justify-between items-center gap-3">
   
   <span className="whitespace-nowrap text-gray-400  ">{t("phone number")}</span>
 
@@ -31,11 +32,11 @@ const Login = () => {
 
   <input
     type="text"
-    className="w-40 p-1 text-center"
+    className="w-40 p-1  focus:outline-none"
   />
 
 
-<div >
+<div className=' flex '>
     <span className="text-gray-400 ">+98</span>
     <span className='text-gray-600'>|</span>
   </div>
