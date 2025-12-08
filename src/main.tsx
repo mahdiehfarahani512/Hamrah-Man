@@ -5,22 +5,25 @@ import "./i18n";
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import Login from "./pages/Login.tsx";
-import Loginp from "./pages/Loginp.tsx";
+
 import Password from "./pages/Password.tsx";
+import Main from "./pages/Main.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Login />,
   },
-  {
-    path: "/Loginp",
-    element: <Loginp />,
-  },
+
   {
     path: "/Password",
     element: <Password />,
   },
+    {
+    path: "/Main",
+    element: <Main />,
+  },
+
 
 ]);
 

@@ -2,7 +2,7 @@ import { useNavigate } from "react-router";
 import logo1 from "../images/light-logo.svg";
 import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
-import { useEffect } from "react";
+
 
 const Login = () => {
   const { t } = useTranslation();
@@ -10,7 +10,6 @@ const Login = () => {
   
   const {
     register,
-    watch,
     formState: { errors },
   } = useForm({
     mode:"onChange",
@@ -73,7 +72,9 @@ const Login = () => {
           </div>
         </div>
 
-        <button className="text-white bg-[#0095da] py-7 w-full h-7 flex items-center justify-center rounded-[8px] mt-13 hover:opacity-80 cursor-pointer transition-all mt-[430px] ">
+        <button
+        onClick={()=>{Changepage("Password")}}
+        className="text-white bg-[#0095da] py-7 w-full h-7 flex items-center justify-center rounded-[8px]  hover:opacity-80 cursor-pointer transition-all mt-[430px] ">
           {t("Confirm & Get Code")}
         </button>
         <div className="flex gap-2 mt-4 items-center justify-center">
