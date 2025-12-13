@@ -8,6 +8,11 @@ import Login from "./pages/Login.tsx";
 
 import Password from "./pages/Password.tsx";
 import Main from "./pages/Main.tsx";
+import Charges from "./pages/Charges.tsx";
+import Internet from "./pages/Internet.tsx";
+import Parse from "./pages/Parse.tsx";
+import Services from "./pages/Services.tsx";
+
 
 const router = createBrowserRouter([
   {
@@ -20,8 +25,14 @@ const router = createBrowserRouter([
     element: <Password />,
   },
     {
-    path: "/Main",
-    element: <Main />,
+    path: "/main",
+    children:[
+      {index:true,element:<Main/>},
+      {path:"charge",element:<Charges/>},
+      {path:"internet",element:<Internet/>},
+      {path:"services",element:<Services/>},
+      {path:"parse",element:<Parse/>}
+    ]
   },
 
 

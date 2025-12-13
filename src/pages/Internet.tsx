@@ -5,6 +5,7 @@ import NavarButton from '../components/NavarButton';
 import Message from '../components/Message';
 import BuyPakage from '../components/BuyPakage';
 import Conversetion from '../components/Conversetion';
+import InternetC from '../components/InternetC';
 
 const Internet = () => {
      const { t } = useTranslation();
@@ -180,7 +181,7 @@ const Internet = () => {
           </button>
  </div>
         <div>
-          {activeInternet==="internet"&&</>}
+          {activeInternet==="internet"&&<InternetC/>}
           {activeInternet==="conversetion"&&<Conversetion/>}
           {activeInternet==="message"&&<Message/>}
         </div>
